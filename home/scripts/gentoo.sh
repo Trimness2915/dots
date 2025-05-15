@@ -34,7 +34,7 @@ make_service() {
     if has_systemd; then
         "$AUTH" systemctl enable "$1"
     else
-        "$AUTH" rc-update "$1" boot
+        "$AUTH" rc-update "$1"
     fi
 }
 
