@@ -96,7 +96,7 @@ add_swayfx() {
     mpv-mpris mpd-mpris acct-group/seat seatd"
 
     user_groups="$user_groups video seat"
-    services="$services seatd"
+    services="$services add seatd"
 }
 
 add_brave() {
