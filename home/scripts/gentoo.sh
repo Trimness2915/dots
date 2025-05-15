@@ -34,7 +34,7 @@ make_service() {
     if has_systemd; then
         "$AUTH" systemctl enable "$1"
     else
-        "$AUTH" rc-update "$1"
+        "$AUTH" rc-update add "$1"
     fi
 }
 
@@ -96,7 +96,7 @@ add_swayfx() {
     mpv-mpris mpd-mpris acct-group/seat seatd"
 
     user_groups="$user_groups video seat"
-    services="$services add seatd"
+    services="$services seatd"
 }
 
 add_brave() {
